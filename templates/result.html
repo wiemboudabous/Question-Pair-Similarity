@@ -1,0 +1,39 @@
+{% extends "bootstrap/base.html" %}
+{% block content %}
+
+
+
+<div class="container">
+  <div class="jumbotron" style="background-color:#1daeff !notveryimportant;">
+    <h2  class="text-primary"style="#6610f2;">Questions Similarity</h2>      
+    <p class="text-primary" style="#6610f2;">Using Machine Learning to Classify question Similarity</p>
+  </div>        
+</div>
+
+<div class="card text-center">
+  <div class="card-header">
+    <h2></h2>
+  </div>
+  <div class="card-body" style="background-color:#6610f2 !notveryimportant;">
+    <h2 class="text-primary" style="background-color:#6610f2 !notveryimportant">Results</h2>
+    <hr/>
+   
+
+<!-- Main ML Prediction Display Here -->
+    {% if y_predict ==  0 %}
+   
+    <a href="#" class="btn btn-primary btn-lg">Not Similaire</a>
+     {% elif y_predict == 1 %}
+	
+    <a href="#" class="btn btn-primary btn-lg">Similaire</a>
+    {% endif%}
+  </div>
+
+<!-- Main ML Prediction Display Ends Here -->
+  <div class="card-footer text-muted">
+   
+  </div>
+</div>
+
+
+{% endblock %}

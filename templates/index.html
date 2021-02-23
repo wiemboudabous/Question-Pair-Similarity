@@ -1,0 +1,33 @@
+{% extends "bootstrap/base.html" %}
+{% block content %}
+
+<div class="container">
+  <div class="jumbotron" style="background-color:#1daeff !notveryimportant;">
+    <h2 class="text-primary"  style="#6610f2;">Question Similarity</h2>      
+    <p class="text-primary" style="#6610f2;">Using Machine Learning to Classify Question Similarity</p>
+  </div>       
+</div>
+
+
+<div class="panel-group">
+    <div class="panel panel-primary">
+      <div class="panel-heading" style="background-color:#D0DFFF ">Question Similarity</div>
+      <div class="panel-body">
+      
+<!-- Main Input For Receiving Query to our ML -->	
+      	<form action="{{ url_for('predict')}}" method="POST">
+			 <input class="card-title form-control" type="text" id="input1" name="input1" placeholder="Enter Question 1"/>
+             <input class="card-title form-control" type="text" id="input2" name="input2" placeholder="Enter Question 2"/>
+			<hr><button type="submit" class="btn btn-primary">Predict</button></hr>
+			</form>
+
+<!-- Main Input For Receiving Query to our ML --> 
+
+
+      </div>
+    </div>
+
+
+
+
+{% endblock %}
